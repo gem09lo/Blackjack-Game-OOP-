@@ -19,10 +19,9 @@ It’s currently a **foundational version**, focusing on the core card logic, an
 
 ## 📁 Project Structure
 
-[blackjack_oop/]
+- [blackjack_oop/]
   - `blackjack_oop.py`: Defines Card, Hand, Deck classes with core logic
   - `test_blackjack_oop.py`: Unit tests using pytest
-
 
 - `requirements.txt`: Dependencies (pytest, pylint)
 - `.gitignore`: Ignores virtual environment, caches, etc.
