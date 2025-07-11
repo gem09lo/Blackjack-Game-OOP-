@@ -1,56 +1,89 @@
-[![badge](./.github/badges/code_quality.svg)](./code_review/report.json)
-[![badge](./.github/badges/total_errors.svg)](./code_review/report.json)
+# 🃏 Blackjack Game - OOP (Object-Oriented Programming)
 
-# 🧑‍💻 Sigma Labs Coursework
+## 🧾 Overview
 
-## 🛠️ Getting Setup
+This project is an **OOP-based refactor** of the classic Blackjack card game, originally built using procedural Python. It restructures the core logic into modular classes (`Card`, `Hand`, `Deck`) and introduces principles of clean, object-oriented design. 
 
-1. **Fork** this Repository to your Github Account
-2. **Enable Workflows** on your cloned Repository. See the below image for how to do this.
-3. **Clone** your Repository to your laptop
-4. **Open** this folder in VSCode
+It’s currently a **foundational version**, focusing on the core card logic, and sets the groundwork for building a fully playable game in future iterations.
 
-<img width="700px" src="https://i.imgur.com/eGyISm9.png" />
+---
 
-## 🗂️ Files Explained
+## 🎯 Project Aims
 
-In this Repository you will find all of the materials for this week of the course.
+- Apply Object-Oriented Programming (OOP) principles in Python
+- Practice clean code architecture with modular class design
+- Build unit tests using `pytest`
+- Reinforce TDD practices from the original Blackjack project
 
-As well as your coursework files you'll find some additional files
+---
 
-- `README.md`
-  - This is the file you are currently reading
-- `.gitignore`
-  - This file is used to tell Git what files to ignore for any changes. This can be safely ignored.
-- `.prettierrc`
-  - This file is used to configure Prettier, an automated formatter that we suggest you install. This can be safely ignored.
-- `.eslintrc.json` and `pylintrc`
-  - Used to ensure that your code is following good style guides
+## 📁 Project Structure
 
-You'll also find some folders:
+[blackjack_oop/]
+  - `blackjack_oop.py`: Defines Card, Hand, Deck classes with core logic
+  - `test_blackjack_oop.py`: Unit tests using pytest
 
-- `.utils` folder
-  - Some config files to help us to test your code
-- `.github` folder
-  - Configuration files used by Github
-- `code_review` folder
-  - Outputs of our automated code reviews. [See below](#code-review-folder) for more details.
-- `.vscode` folder
-  - This folder contains settings and config files for VSCode. They can be safely ignored.
+- `requirements.txt`: Dependencies (pytest, pylint)
+- `.gitignore`: Ignores virtual environment, caches, etc.
 
-Any other files or folder found here **are** relevant for your coursework.
+--- 
 
-## ✅ Code Review Folder
+## ⚙️ Getting Setup
 
-Every time you commit your code to Github, we will run a suite of tests to ensure that you code is of high quality.
+1. **Clone the repo**
+  - `git clone https://github.com/your-username/blackjack_oop.git`
+  - `cd blackjack_oop`
 
-It's worth noting - this **does not evaluate the quality of your solution**. Think of it as evaluating the 'grammar' and 'spelling' of your code rather than the actual quality of the work you've done.
+2. **Create and activate a virtual environment**
+  - `python -m venv .venv`
+  - `source .venv/bin/activate`  
+    - Or `.- venv\Scripts\activate` on Windows
 
-Inside this folder you'll find two files
+3. **Install dependencies**
+  - `pip install -r requirements.txt`
 
-- `report.txt`
-  - A plain text version of your code quality
-- `report.json`
-  - A computer-friendly version of your code quality, including your 'Code Quality Score'
+🕹️ **Note**: This version is not yet interactive. It contains core logic only and does not include a CLI game loop.
 
-Consistently keeping your score high will make your code easier to read and understand.
+---
+
+## 🧪 Running the Tests
+
+This project uses pytest to verify:
+- Cards return correct values
+- Deck is correctly generated and drawn from
+- Hands handle multiple cards and Ace edge cases properly
+
+Make sure your virtual environment is active. Then run:
+- `pytest test_blackjack_oop.py`
+
+--- 
+
+## 🧼 Code Quality
+- Follows clean code principles from the Sigma Labs curriculum
+- Modular class structure for maintainability
+- Code linted with pylint to ensure readability and consistency
+
+---
+
+## 🧠 Concepts Demonstrated
+
+- Object-Oriented Programming (OOP)
+  - Classes and Encapsulation
+  - Methods and State Management
+- Unit Testing with `pytest`
+- Clean Code Practices
+- Handling edge cases (e.g. two Aces = 21)
+
+--- 
+
+## 🚀 Next Steps (Ideas for Extension)
+
+- Add a Player class to represent players and dealers
+- Build a game loop for user interaction (CLI or GUI)
+- Shuffle the deck before play
+- Handle busts, dealer logic, etc.
+
+--- 
+
+## 🙌 Acknowledgments
+This refactor is part of the training programme to improve OOP design and testing in Python, based on a procedural Blackjack game created during Week 1 of Sigma Labs' data engineering course.
